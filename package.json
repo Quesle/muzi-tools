@@ -1,8 +1,8 @@
 {
-  "name": "muzi-tools",
-  "version": "1.0.0",
+  "name": "@ooo-design/muzi-tools",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "father-build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/Quesle/muzi-tools/issues"
   },
+  "files": [
+    "es",
+    "lib"
+  ],
   "homepage": "https://github.com/Quesle/muzi-tools#readme",
   "dependencies": {
     "@babel/cli": "^7.20.7",
