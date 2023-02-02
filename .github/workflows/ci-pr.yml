@@ -28,33 +28,33 @@ jobs:
       - name: Install
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: yarn install
-build:
-  name: Build package
-  needs: install
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.pull_request.head.sha }}
-    - name: Setup Node.js
-      uses: actions/setup-node@v2.5.1
-      with:
-        node-version: 16
-    - name: Restore Node.js modules
-      uses: actions/cache@v2.1.7
-      with:
-        path: node_modules
-        key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-    - name: Cache package
-      id: cache-package
-      uses: actions/cache@v2.1.7
-      with:
-        path: |
-          dist
-          es
-          lib
-        key: package-${{ github.event.pull_request.head.sha }}
-    - name: Build
-      if: steps.cache-package.outputs.cache-hit != 'true'
-      run: yarn build
+  build:
+    name: Build package
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: 16
+      - name: Restore Node.js modules
+        uses: actions/cache@v2.1.7
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+      - name: Cache package
+        id: cache-package
+        uses: actions/cache@v2.1.7
+        with:
+          path: |
+            dist
+            es
+            lib
+          key: package-${{ github.event.pull_request.head.sha }}
+      - name: Build
+        if: steps.cache-package.outputs.cache-hit != 'true'
+        run: yarn build
