@@ -1,10 +1,8 @@
-name: CI on Pull Request
+name: CI on Master
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
+  push:
+    branches:
+      - master
 jobs:
   install:
     name: Install dependencies
