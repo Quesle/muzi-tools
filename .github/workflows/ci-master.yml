@@ -1,8 +1,8 @@
-name: CI on Master
+name: CI on main
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   install:
     name: Install dependencies

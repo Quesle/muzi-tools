@@ -1,6 +1,6 @@
 {
   "name": "@ooo-design/muzi-tools",
-  "version": "0.0.0-development",
+  "version": "1.1.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -21,6 +21,11 @@
     "es",
     "lib"
   ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "homepage": "https://github.com/Quesle/muzi-tools#readme",
   "dependencies": {
     "@babel/cli": "^7.20.7",
