@@ -4,7 +4,7 @@ module.exports = {
     [
       "@semantic-release/release-notes-generator",
       {
-        config: "conventional-changelog-cmyr-config",
+        config: "conventional-changelog",
       },
     ],
     [
