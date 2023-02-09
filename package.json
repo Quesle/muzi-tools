@@ -19,13 +19,9 @@
   },
   "files": [
     "es",
-    "lib"
+    "lib",
+    "dist"
   ],
-  "release": {
-    "branches": [
-      "main"
-    ]
-  },
   "homepage": "https://github.com/Quesle/muzi-tools#readme",
   "dependencies": {
     "@babel/cli": "^7.20.7",
@@ -45,5 +41,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
