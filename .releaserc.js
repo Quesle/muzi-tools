@@ -2,18 +2,7 @@ module.exports = {
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    // [
-    //   "@semantic-release/release-notes-generator",
-    //   {
-    //     config: "conventional-changelog",
-    //   },
-    // ],
-    [
-      "@semantic-release/changelog",
-      {
-        changelogFile: "CHANGELOG.md",
-      },
-    ],
+    "@semantic-release/changelog",
     "@semantic-release/npm",
     [
       "@semantic-release/git",
